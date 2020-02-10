@@ -1,0 +1,36 @@
+{
+    "model" : {
+        "backend":              "Tiny Yolo",
+        "input_size":           416,
+        "anchors":              [1.88,3.13, 1.88,3.13, 1.88,3.13, 1.88,3.13, 1.88,3.13],
+        "max_box_per_image":    8,        
+        "labels":               ["phone", "music", "maps", "messages", "playing", "podcasts", "audiobook", "audiotest"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/xueguang/coding/machine_learning/keras-yolo2-master/carplay/images_tiny/",
+        "train_annot_folder":   "/home/xueguang/coding/machine_learning/keras-yolo2-master/carplay/annotations_tiny/",     
+          
+        "train_times":          8,
+        "pretrained_weights":   "",
+        "batch_size":           8,
+        "learning_rate":        1e-5,
+        "nb_epochs":            10,
+        "warmup_epochs":        3,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "tiny_yolo_carplay.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+
+        "valid_times":          1
+    }
+}
